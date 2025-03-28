@@ -61,7 +61,6 @@ Antes de comenzar, asegúrate de tener instalado:
    ```json
    {
      "name": "nombre-de-tu-proyecto",
-     ...
    }
    ```
 
