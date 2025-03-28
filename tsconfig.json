@@ -1,7 +1,43 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@project/*": ["./src/*"],
+      "@adapters/*": ["./src/adapters/*"],
+      "@auth/*": ["./src/auth/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@ui/*": ["./src/components/common/ui/*"],
+      "@tests/*": ["./src/tests/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@api/*": ["./src/api/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@layout/*": ["./src/layout/*"],
+      "@models/*": ["./src/models/*"],
+      "@services/*": ["./src/services/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@store/*": ["./src/store/*"],
+      "@styledLibrary/*": ["./src/styled-library/*"]
+    },
+
+    "strictNullChecks": true,
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["vitest/globals"]
+  },
+  "include": ["src", "tests", "tests/setup.ts", "index.d.ts"]
 }

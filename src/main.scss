@@ -1,0 +1,36 @@
+$primary: #dfa878;
+$secondary: #8d6e63;
+$target: #2d2d2d;
+$button: #dfa878;
+$accent: #ffca28;
+
+$background_light: #faf3e0;
+$text_light: #3e2723;
+
+$background_dark: #1c1c1c;
+$text_dark: #ededed;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: $text_light;
+    background-color: $background_light;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: $text_dark;
+    background-color: $background_dark;
+  }
+}
