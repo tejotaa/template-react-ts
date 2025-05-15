@@ -1,5 +1,4 @@
 import { describe, it, expect } from 'vitest';
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from '../../src/App';
 
@@ -8,7 +7,7 @@ describe('App', () => {
     render(<App />);
 
     // Check if the title is rendered
-    const titleElement = screen.getByText(/Vite \+ React/i);
+    const titleElement = screen.getByText('2025 BAKERY');
     expect(titleElement).toBeInTheDocument();
   });
 });
