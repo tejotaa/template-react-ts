@@ -1,0 +1,29 @@
+@use '../../../_theme.scss';
+
+.footerBottom {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footerBottomRight,
+.footerBottomLeft,
+.optionsItems {
+  align-items: center;
+  display: flex;
+}
+
+.optionsItems:not(:first-child) {
+  text-decoration: solid;
+}
+.point {
+  padding: 0 theme.$spaceM;
+}
+.optionItem {
+  color: theme.$letterColor;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+}

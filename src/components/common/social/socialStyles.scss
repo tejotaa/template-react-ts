@@ -1,0 +1,14 @@
+@use "../../../_theme.scss";
+
+.social {
+  padding-left: calc(theme.$spaceL * 2);
+  display: flex;
+  justify-content: end;
+}
+.icons:not(:first-of-type) {
+  padding-left: theme.$spaceL;
+}
+
+.icons:hover {
+  cursor: pointer;
+}

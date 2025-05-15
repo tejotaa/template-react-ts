@@ -1,6 +1,6 @@
 # Template React + TypeScript
 
-¡Bienvenido al **Template React + TypeScript**! Este proyecto sirve como un boilerplate para crear aplicaciones modernas utilizando React y TypeScript. Está diseñado para ser escalable, fácil de usar y personalizable.
+¡Bienvenido a **BAKERY**
 
 ## 🚀 Características
 
@@ -14,7 +14,7 @@
 ## 📂 Estructura del proyecto
 
 ```
-template-react-ts/
+bakery/
 ├── __tests__/         # Tests unitarios
 │   ├── components/    # Ficheros de tests unitarios para los componentes
 |   └── pages/         # Ficheros de tests unitarios para las páginas
@@ -60,7 +60,7 @@ Antes de comenzar, asegúrate de tener instalado:
 
    ```json
    {
-     "name": "nombre-de-tu-proyecto",
+     "name": "nombre-de-tu-proyecto"
    }
    ```
 

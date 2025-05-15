@@ -1,7 +1,7 @@
 {
-  "name": "template-react-ts",
+  "name": "bakery",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "all-tests": "vitest run && cypress run",
@@ -20,6 +20,10 @@
     }
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.1.0",
+    "@mui/material": "^7.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

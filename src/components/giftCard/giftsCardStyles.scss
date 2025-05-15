@@ -1,0 +1,16 @@
+@use "../../_theme.scss";
+
+$cardSize: 200px;
+$logoSize: theme.$spaceXL;
+
+.cardStyle {
+    width: 100%;
+    min-width: $cardSize * 0.5;
+    max-width: $cardSize * 1.5;
+    height: $cardSize;
+}
+
+.logoStyle {
+    width: $logoSize;
+    height: $logoSize;
+}

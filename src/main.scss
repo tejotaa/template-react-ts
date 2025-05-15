@@ -1,3 +1,5 @@
+@use './_theme.scss';
+
 $primary: #dfa878;
 $secondary: #8d6e63;
 $target: #2d2d2d;
@@ -19,18 +21,20 @@ $text_dark: #ededed;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color: theme.$letterColor;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: $text_light;
-    background-color: $background_light;
-  }
-}
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     color: $text_light;
+//     background-color: $background_light;
+//   }
+// }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: $text_dark;
-    background-color: $background_dark;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     color: $text_dark;
+//     background-color: $background_dark;
+//   }
+// }
