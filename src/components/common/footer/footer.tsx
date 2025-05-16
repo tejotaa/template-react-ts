@@ -34,22 +34,22 @@ export default function Footer() {
     {
       value: '2025 BAKERY',
       addCopyRight: true,
-      url: 'https://www.bakery.com',
+      url: '',
     },
     {
       value: 'Privacy',
       addCopyRight: false,
-      url: 'https://www.bakery.com/privacy',
+      url: 'privacy',
     },
     {
       value: 'Terms',
       addCopyRight: false,
-      url: 'https://www.bakery.com/terms',
+      url: 'terms',
     },
     {
       value: 'Sitemap',
       addCopyRight: false,
-      url: 'https://www.bakery.com/sitemap',
+      url: 'sitemap',
     },
   ];
 
@@ -63,7 +63,7 @@ export default function Footer() {
             return (
               <span key={index} className="optionsItems">
                 {item.addCopyRight && <CopyrightIcon fontSize="small" sx={{ marginRight: '5px' }} />}
-                <a className="optionItem" href={item.url} target="_blank" rel="noopener noreferrer">
+                <a className="optionItem" href={'/'+ item.url} rel="noopener noreferrer">
                   {item.value}
                 </a>
                 {index < optionsItem.length - 1 && <a className="point">·</a>}

@@ -1,9 +1,15 @@
 @use '../../../_theme.scss';
 
+.footer {
+  margin: auto;
+  max-width: theme.$maxDesktopWidth;
+}
+
 .footerBottom {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  padding: theme.$spaceL 0;
   width: 100%;
 }
 
