@@ -7,7 +7,7 @@ describe('App', () => {
     render(<App />);
 
     // Check if the title is rendered
-    const titleElement = screen.getByText('2025 BAKERY');
+    const titleElement = screen.getByText('2025 Bakery');
     expect(titleElement).toBeInTheDocument();
   });
 });

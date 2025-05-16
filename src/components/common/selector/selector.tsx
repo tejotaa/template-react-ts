@@ -15,8 +15,14 @@ interface SelectorsType {
   setOptionSelected: (value: string) => void;
 }
 
+const color = '#454545';
+
 function printIcon(icon: string) {
-  return icon === 'AttachMoneyIcon' ? <AttachMoneyIcon /> : <LanguageIcon />;
+  return icon === 'AttachMoneyIcon' ? (
+    <AttachMoneyIcon color="inherit" sx={{ color: color }} />
+  ) : (
+    <LanguageIcon color="inherit" sx={{ color: color }} />
+  );
 }
 
 export default function Selector({ icon, options, optionSelected, selectorName, setOptionSelected }: SelectorsType) {
@@ -26,9 +32,14 @@ export default function Selector({ icon, options, optionSelected, selectorName, 
   return (
     <FormControl variant="standard" sx={{ flexDirection: 'row', alignItems: 'center', marginRight: '10px' }}>
       {icon && printIcon(icon)}
-      <Select id={selectorName} value={optionSelected} onChange={handleChange} sx={{ marginLeft: icon ? '10px' : '0' }}>
+      <Select
+        data-testid={selectorName}
+        onChange={handleChange}
+        sx={{ marginLeft: icon ? '10px' : '0', color: color }}
+        value={optionSelected}
+      >
         {options.map((option) => (
-          <MenuItem key={option.value} value={option.value}>
+          <MenuItem key={option.value} value={option.value} sx={{ color: color }}>
             {option.label}
           </MenuItem>
         ))}

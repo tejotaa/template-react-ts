@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './footerStyles.scss';
 
-import { Divider } from '@mui/material';
+import { Divider, Link } from '@mui/material';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 
 import Social from '../social/social';
@@ -12,12 +12,12 @@ export default function Footer() {
   const [currency, setCurrency] = useState('EUR');
 
   const languageOptions = [
-    { label: 'English', value: 'en' },
-    { label: 'Spanish', value: 'es' },
-    { label: 'French', value: 'fr' },
-    { label: 'German', value: 'de' },
-    { label: 'Italian', value: 'it' },
-    { label: 'Portuguese', value: 'pt' },
+    { label: 'ENGLISH', value: 'en' },
+    { label: 'SPANISH', value: 'es' },
+    { label: 'FRENCH', value: 'fr' },
+    { label: 'GERMAN', value: 'de' },
+    { label: 'ITALIAN', value: 'it' },
+    { label: 'PORTUGUESE', value: 'pt' },
   ];
 
   const currencyOptions = [
@@ -32,7 +32,7 @@ export default function Footer() {
 
   const optionsItem = [
     {
-      value: '2025 BAKERY',
+      value: '2025 Bakery',
       addCopyRight: true,
       url: '',
     },
@@ -63,9 +63,9 @@ export default function Footer() {
             return (
               <span key={index} className="optionsItems">
                 {item.addCopyRight && <CopyrightIcon fontSize="small" sx={{ marginRight: '5px' }} />}
-                <a className="optionItem" href={'/'+ item.url} rel="noopener noreferrer">
+                <Link href={'/' + item.url} underline="hover" color={'#454545'} rel="noopener noreferrer">
                   {item.value}
-                </a>
+                </Link>
                 {index < optionsItem.length - 1 && <a className="point">·</a>}
               </span>
             );

@@ -1,29 +1,30 @@
 import './socialStyles.scss';
-import facebook from './assets/facebook.svg';
-import instagram from './assets/instagram.svg';
-import twitter from './assets/twitter.svg';
+import { Link, SvgIcon } from '@mui/material';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 interface socialType {
-  src: string;
   alt: string;
+  src: any;
   testId: string;
   url?: string;
 }
 
 const socialIcons: socialType[] = [
   {
-    src: facebook,
     alt: 'Facebook',
+    src: FacebookIcon,
     testId: 'facebook',
   },
   {
-    src: twitter,
     alt: 'Twitter',
+    src: TwitterIcon,
     testId: 'twitter',
   },
   {
-    src: instagram,
     alt: 'Instagram',
+    src: InstagramIcon,
     testId: 'instagram',
   },
 ];
@@ -32,18 +33,15 @@ export default function Social() {
   return (
     <div className="social">
       {socialIcons.map((icon) => (
-        <img
-          alt={icon.alt}
-          className="icons"
+        <Link
           data-testid={`social-icon-${icon.testId}`}
           key={icon.testId}
-          src={icon.src}
-          onClick={() => {
-            if (icon.url) {
-              window.open(icon.url, '_blank');
-            }
-          }}
-        />
+          href={'/' + icon.url}
+          color={'#454545'}
+          rel="noopener noreferrer"
+        >
+          <SvgIcon component={icon.src} />
+        </Link>
       ))}
     </div>
   );

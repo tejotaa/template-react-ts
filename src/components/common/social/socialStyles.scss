@@ -5,10 +5,10 @@
   display: flex;
   justify-content: end;
 }
-.icons:not(:first-of-type) {
-  padding-left: theme.$spaceL;
+.social > a:not(:first-of-type) {
+  margin-left: theme.$spaceL;
 }
 
-.icons:hover {
+.social > a:hover {
   cursor: pointer;
 }
