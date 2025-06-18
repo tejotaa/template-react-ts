@@ -24,6 +24,10 @@ $text_dark: #ededed;
   text-rendering: optimizeLegibility;
 }
 
+.alternativeBackground {
+  background-color: theme.$backgroundColorAleternative;
+}
+
 // @media (prefers-color-scheme: light) {
 //   :root {
 //     color: $text_light;

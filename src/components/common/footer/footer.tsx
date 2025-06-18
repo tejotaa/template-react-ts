@@ -54,45 +54,47 @@ export default function Footer() {
   ];
 
   return (
-    <section className="footer">
-      <div className="footerTop"></div>
-      <Divider />
-      <div className="footerBottom">
-        <div className="footerBottomLeft">
-          {optionsItem.map((item, index) => {
-            return (
-              <span key={index} className="optionsItems">
-                {item.addCopyRight && <CopyrightIcon fontSize="small" sx={{ marginRight: '5px' }} />}
-                <Link href={'/' + item.url} underline="hover" color={'#454545'} rel="noopener noreferrer">
-                  {item.value}
-                </Link>
-                {index < optionsItem.length - 1 && <a className="point">·</a>}
-              </span>
-            );
-          })}
+    <div className="alternativeBackground">
+      <section className="footer">
+        <div className="footerTop">top</div>
+        <Divider />
+        <div className="footerBottom">
+          <div className="footerBottomLeft">
+            {optionsItem.map((item, index) => {
+              return (
+                <span key={index} className="optionsItems">
+                  {item.addCopyRight && <CopyrightIcon fontSize="small" sx={{ marginRight: '5px' }} />}
+                  <Link href={'/' + item.url} underline="hover" color={'#454545'} rel="noopener noreferrer">
+                    {item.value}
+                  </Link>
+                  {index < optionsItem.length - 1 && <a className="point">·</a>}
+                </span>
+              );
+            })}
+          </div>
+          <div className="footerBottomRight">
+            <Selector
+              icon={'LanguageIcon'}
+              options={languageOptions}
+              optionSelected={language}
+              selectorName="language"
+              setOptionSelected={(event) => {
+                setLanguage(event);
+              }}
+            />
+            <Selector
+              icon={'AttachMoneyIcon'}
+              options={currencyOptions}
+              optionSelected={currency}
+              selectorName="currency"
+              setOptionSelected={(event) => {
+                setCurrency(event);
+              }}
+            />
+            <Social />
+          </div>
         </div>
-        <div className="footerBottomRight">
-          <Selector
-            icon={'LanguageIcon'}
-            options={languageOptions}
-            optionSelected={language}
-            selectorName="language"
-            setOptionSelected={(event) => {
-              setLanguage(event);
-            }}
-          />
-          <Selector
-            icon={'AttachMoneyIcon'}
-            options={currencyOptions}
-            optionSelected={currency}
-            selectorName="currency"
-            setOptionSelected={(event) => {
-              setCurrency(event);
-            }}
-          />
-          <Social />
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

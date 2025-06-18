@@ -1,0 +1,14 @@
+@use '../../../_theme.scss';
+
+.header {
+  margin: auto;
+  max-width: theme.$maxDesktopWidth;
+  padding: theme.$anchorPadding;
+}
+
+.iconTitle {
+  display: flex;
+  .iconStyle {
+    margin-right: theme.$spaceS;
+  }
+}
